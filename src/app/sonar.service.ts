@@ -15,18 +15,17 @@ export class SonarService {
   getProjects(): Observable<Project> {
     const project: Project = { id: 123 };
 
-    const corsIo = "https://cors.io/?";
-    const sonarCloud = "https://sonarcloud.io/api/components/search?qualifiers=TRK"
-    const blockchain = "https://blockchain.info/stats?format=json"
+    const corsIo = 'https://cors.io/?';
+    const sonarCloud = 'https://sonarcloud.io/api/components/search?qualifiers=TRK';
+    const blockchain = 'https://blockchain.info/stats?format=json';
 
     return this.http.get(corsIo + sonarCloud)
     .pipe(
-      map(result => result["paging"].total ),
+      map(result => result['paging'].total ),
       tap(h => {
         const outcome = h ? `fetched` : `did not find`;
         console.log(`outcome: ${outcome}`);
       })
     );
-    // return project;
   }
 }

@@ -12,10 +12,10 @@ export class AppComponent {
   constructor(private sonarService: SonarService) { }
 
   public testRest() {
-    console.log("testing");
+    console.log('testing');
     this.sonarService.getProjects().subscribe(
       res => console.log(res),
       err => console.error(err)
-    )
+    );
   }
 }
