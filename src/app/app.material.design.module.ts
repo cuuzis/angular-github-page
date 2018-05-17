@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
 import { MatToolbarModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
